@@ -133,7 +133,7 @@ a:focus {
 }
 .nav-item a {
     background: transparent;
-    border: 3px solid rgb(103, 103, 180);
+    border: 1px solid rgb(103, 103, 180);
     color: #fff;
     margin-top: 1em;
 }
@@ -235,6 +235,12 @@ a:focus {
     margin-left: 1em;
     color: #fff;
     text-shadow: 0 1px 1px #333;
+}
+
+.post-comments {
+    margin-top: 2em;
+    padding-top: 1.2em;
+    border-top: 1px solid rgb(103, 103, 180);
 }
 
 .pagination {
