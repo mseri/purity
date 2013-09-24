@@ -1,0 +1,59 @@
+% {{meta\_title}}
+% 
+% 
+
+<div class="pure-g-r" id="layout">
+{{! The big featured header on the homepage, with the site logo and
+description }}
+
+<div class="sidebar pure-u">
+<header class="header" {{#if @blog.cover}}style="background: url({{@blog.cover}}) no-repeat 0px 0px scroll;" {{ if}}>
+<hgroup>
+{{\#if @blog.logo}}[![Blog Logo]({{@blog.logo}})]({{@blog.url}}){{/if}}
+
+[{{@blog.title}}]({{@blog.url}}) {.blog-title}
+================================
+
+{{@blog.description}} {.blog-description}
+---------------------
+
+</hgroup>
+<nav class="nav">
+
+-   [](http://www.twitter.com/marcelloseri)
+-   [](http://www.facebook.com/marcelloseri)
+-   [](http://plus.google.com)
+-    
+-   []({{@blog.url}}/rss/)
+
+</nav> {{! Here one could add a nav.nav containing ul.nav-list and
+li.nav-item }}
+
+</header>
+</div>
+<div class="pure-u-1">
+{{! Everything else gets inserted here }} {{{body}}}
+
+<footer class="footer">
+<div class="inner">
+<section class="copyright">
+© 2013 [{{@blog.title}}](/), all rights reserved.
+
+</section>
+<section class="poweredby">
+Proudly published with [Ghost](http://tryghost.org)
+
+</section>
+</div>
+</footer>
+</div>
+</div>
+{{! Ghost outputs important scripts and data with this tag }}
+{{ghost\_foot}} {{! The main JavaScript file for Casper }}
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

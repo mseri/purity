@@ -1,0 +1,303 @@
+/* Import the font file with the icons in it */
+@font-face {
+    font-family: 'icons';
+    src:url('../fonts/icons.eot');
+    src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icons.woff') format('woff'),
+        url('../fonts/icons.ttf') format('truetype'),
+        url('../fonts/icons.svg#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply these base styles to all icons */
+.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
+    font-family: 'icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
+
+/*
+When setting the primary font stack, apply it to the Pure grid units along with
+the `body`. Pure Grids use specific font stacks to ensure the greatest
+OS/browser compatibility.
+*/
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    /* Set you're content font stack here: */
+    font-family: 'Open Sans', Helvetica , sans-serif;
+}
+
+/* Each icon is created by inserting the corret character into the 
+   content of the :before pseudo element. Like a boss. */
+.icon-ghost:before {
+    content: "\e000";
+}
+.icon-feed:before {
+    content: "\e001";
+}
+.icon-twitter:before {
+    content: "\e002";
+    font-size: 1.1em;
+}
+.icon-google-plus:before {
+    content: "\e003";
+}
+.icon-facebook:before {
+    content: "\e004";
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(142, 142, 214);
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+/* LAYOUT CSS */
+#layout {
+    padding-left: 25%; /* "left col (nav + list)" width */
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    margin-left: -25%;
+    background: rgb(24, 33, 61);
+    color: #fff;
+}
+
+.header {
+    margin: 50% 2em 0;
+    text-align: right;
+}
+
+.blog-title,
+.blog-description {
+    margin: 0;
+}
+.blog-title {
+    text-transform: uppercase;
+}
+.blog-description {
+    font-weight: 300;
+    color: rgb(142, 142, 214);
+}
+
+.blog-title a {
+    color: rgb(255,255,255);
+}
+
+.blog-title a:hover {
+    text-decoration: none;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.nav-item a {
+    background: transparent;
+    border: 3px solid rgb(103, 103, 180);
+    color: #fff;
+    margin-top: 1em;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+    border: 3px solid rgb(142, 142, 214);
+    color: rgb(142, 142, 214);
+    text-decoration: none;
+}
+
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    padding: 2em 3em 0;
+    max-width: 900px;
+}
+
+.post {
+    padding-bottom: 2em;
+}
+.post-title {
+    font-size: 2em;
+    color: rgb(142, 142, 214);
+    margin-bottom: 0.2em;
+}
+.post-avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+}
+.post-description {
+    font-family: 'Droid Serif', Georgia, serif;
+    color: #444;
+    line-height: 1.8em;
+}
+.post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+.post-tagline {
+    /*margin: 0 0.1em;
+    padding: 0.3em 0.5em;*/
+    /*border: 1px solid rgb(142, 142, 214);
+    font-size: 80%;*/
+    /*-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;*/
+}
+
+.post-images {
+    margin: 1em 0;
+}
+.post-image-meta {
+    margin-top: -3.5em;
+    margin-left: 1em;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+}
+
+.pagination {
+    margin-bottom: 10px;
+}
+
+    .page-number {
+        color: #999;
+        margin-left:5px;
+        margin-right:5px;
+        text-align: center;
+    }
+
+    .older-posts:before{
+        content: '• ';
+    }
+
+    .newer-posts:after {
+        content: ' •';
+    }
+
+.footer {
+    text-align: center;
+    padding: 1em 0;
+    color: #999;
+    font-size: 70%;
+}
+.footer a {
+    color: #333;
+}
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus {
+    background: none;
+}
+
+.social-list {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+}
+.social-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.social-item a {
+    background: transparent;
+    color: #fff;
+    margin-top: 1em;
+}
+
+.post-share-box {
+    display: block;
+    float: right;
+    text-align: center;
+    margin: 0;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+    padding: 1em;
+    padding-top:0.5em;
+    border: 1px solid rgb(142, 142, 214);
+}
+.share h3 {
+    margin: 0;
+    margin-bottom: 0.5em;
+    font-size: 80%;
+}
+
+.share {
+    font-size: 120%;
+}
+
+.share a {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/* Hides shit */
+.hidden {
+    text-indent: -9999px;
+    visibility: hidden;
+    display: none;
+}
+
+@media (max-width: 970px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        margin: 0;
+    }
+
+    .header {
+        text-align: center;
+        top: auto;
+        margin: 3em auto;
+        position: static;
+    }
+
+    #layout {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 2em 1em 0;
+    }
+}

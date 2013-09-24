@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <link rel="stylesheet" href="{{@blog.url}}/assets/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400" />
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <div class="pure-g-r" id="layout">
+        {{! The big featured header on the homepage, with the site logo and description }}
+        <div class="sidebar pure-u">
+            <header class="header" {{#if @blog.cover}}style="background: url({{@blog.cover}}) no-repeat 0px 0px scroll;"{{/if}}>
+                <hgroup>
+                    {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+                    <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+                    <h2 class="blog-description">{{@blog.description}}</h2>
+                </hgroup>
+
+                <nav class="nav">
+                <ul class="social-list">
+                    <li class="social-item"><a class="subscribe icon-feed icon-twitter" href="http://www.twitter.com/marcelloseri" target="_blank"></a></li>
+                    <li class="social-item"><a class="subscribe icon-feed icon-facebook" href="http://www.facebook.com/marcelloseri" target="_blank"></a></li>
+                    <li class="social-item"><a class="subscribe icon-feed icon-google-plus" href="http://plus.google.com" target="_blank"></a></li>
+                    <li class="social-item">&nbsp;</li>
+                    <li class="social-item"><a class="subscribe icon-feed tooltip" href="{{@blog.url}}/rss/" target="_blank"></a></li>
+                </ul>
+                </nav>
+                {{! Here one could add a nav.nav containing ul.nav-list and li.nav-item }}
+            </header>
+        </div>
+        <div class="pure-u-1 container">
+            {{! Everything else gets inserted here }}
+            {{{body}}}
+
+            <footer class="footer">
+             <section class="copyright">&copy; 2013 <a href="{{@blog.url}}">{{@blog.title}}</a>, all rights reserved</section>
+             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://tryghost.org" target="_blank">Ghost</a> &bull; The theme <a href="http://www.github.com/mser/pureGhost" target="_blank">pureGhost</a> is inspired by <a href="http://purecss.io" target="_blank">PureCSS</a></section>
+            </footer>
+        </div>
+    </div>
+
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Casper }}
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

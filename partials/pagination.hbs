@@ -1,0 +1,15 @@
+<nav class="pagination pure-grid" role="pagination">
+    <div class="pure-u-1-3">
+    {{#if prev}}
+        <a class="newer-posts" href="{{pageUrl prev}}">&larr; Newer Posts</a>
+    {{/if}}
+    </div>
+    <div class="pure-u-1-3">
+    	<span class="page-number">Page {{page}} of {{pages}}</span>
+    </div>
+    <div class="pure-u-1-3">
+    {{#if next}}
+        <a class="older-posts" href="{{pageUrl next}}">Older Posts &rarr;</a>
+    {{/if}}
+    </div>
+</nav>
