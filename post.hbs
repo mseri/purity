@@ -19,11 +19,15 @@
         </header> /-->
 
         {{! Everything inside the #post tags pulls data from the post }}
+        <div class="back">
+            <a href="javascript:history.go(-1);">&larr;  back to the previous page</a>
+        </div>
+
         {{#post}}
 
         <header class="post-header">
             {{! img class="post-avatar" alt="Tilo Mitra's avatar" src="/img/common/tilo-avatar.png" height="48" width="48"}}
-            <h2 class="post-title">{{title}}</h2>
+            <h2 class="post-title big">{{title}}</h2>
             <p class="post-meta">Written{{#if author}} by {{author.name}}{{/if}} the <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> - <span class="post-tagline">{{#if tags}} Tagged: {{tags separator=" | "}}{{/if}}</span></p>
         </header>
 

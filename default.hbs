@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{! Styles'n'Scripts }}
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
+    <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">/-->
     <link rel="stylesheet" href="{{@blog.url}}/assets/css/style.css">
 
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400" />
@@ -26,7 +26,7 @@
     <div class="pure-g-r" id="layout">
         {{! The big featured header on the homepage, with the site logo and description }}
         <div class="sidebar pure-u">
-            <header class="header" {{#if @blog.cover}}style="background: url({{@blog.cover}}) no-repeat 0px 0px scroll;"{{/if}}>
+            <header class="header">
                 <hgroup>
                     {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
                     <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
@@ -35,24 +35,27 @@
 
                 <nav class="nav">
                 <ul class="social-list">
-                    <li class="social-item"><a class="subscribe icon-feed icon-twitter" href="http://www.twitter.com/marcelloseri" target="_blank"></a></li>
-                    <li class="social-item"><a class="subscribe icon-feed icon-facebook" href="http://www.facebook.com/marcelloseri" target="_blank"></a></li>
-                    <li class="social-item"><a class="subscribe icon-feed icon-google-plus" href="http://plus.google.com" target="_blank"></a></li>
+                    <li class="social-item"><a class="subscribe icon-feed icon-twitter" href="http://www.twitter.com/marcelloseri" target="_blank"></a></li>&nbsp;
+                    <li class="social-item"><a class="subscribe icon-feed icon-facebook" href="http://www.facebook.com/marcelloseri" target="_blank"></a></li>&nbsp; 
+                    <li class="social-item"><a class="subscribe icon-feed icon-google-plus" href="http://plus.google.com" target="_blank"></a></li>&nbsp;
                     <li class="social-item">&nbsp;</li>
                     <li class="social-item"><a class="subscribe icon-feed tooltip" href="{{@blog.url}}/rss/" target="_blank"></a></li>
                 </ul>
                 </nav>
                 {{! Here one could add a nav.nav containing ul.nav-list and li.nav-item }}
             </header>
+            <footer class="footer">
+             <section class="copyright">&copy; 2013 <a href="{{@blog.url}}">{{@blog.title}}</a>, all rights reserved</section>
+             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://tryghost.org" target="_blank">Ghost</a></section> 
+             <section class="theme">Theme <a href="http://www.github.com/mser/pureGhost" target="_blank">pureGhost</a> is inspired by <a href="http://purecss.io" target="_blank">PureCSS</a></section>
+            </footer>
+            
         </div>
         <div class="pure-u-1 container">
             {{! Everything else gets inserted here }}
             {{{body}}}
 
-            <footer class="footer">
-             <section class="copyright">&copy; 2013 <a href="{{@blog.url}}">{{@blog.title}}</a>, all rights reserved</section>
-             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://tryghost.org" target="_blank">Ghost</a> &bull; The theme <a href="http://www.github.com/mser/pureGhost" target="_blank">pureGhost</a> is inspired by <a href="http://purecss.io" target="_blank">PureCSS</a></section>
-            </footer>
+            
         </div>
     </div>
 

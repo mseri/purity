@@ -1,3 +1,6 @@
+/* Import purecss-0.3 */
+@import url(pure-min-0.3.css);
+
 /* Import the font file with the icons in it */
 @font-face {
     font-family: 'icons';
@@ -33,6 +36,14 @@ body,
 .pure-g-r [class *= "pure-u"] {
     /* Set you're content font stack here: */
     font-family: 'Open Sans', Helvetica , sans-serif;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin-top: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Each icon is created by inserting the corret character into the 
@@ -86,7 +97,7 @@ a:focus {
 }
 
 .header {
-    margin: 50% 2em 0;
+    margin: 1.5em 2em 0;
     text-align: right;
 }
 
@@ -133,6 +144,28 @@ a:focus {
     text-decoration: none;
 }
 
+.social-list {
+    margin: 0;
+    margin-top: 1.5em;
+    padding: 0;
+    list-style: none;
+}
+.social-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.social-item a {
+    background: transparent;
+    color: #fff;
+    margin-top: 1em;
+}
+.social-item a:hover {
+    text-decoration: none;
+    color: rgb(142, 142, 214);
+}
+
 .content-subhead {
     text-transform: uppercase;
     color: #aaa;
@@ -144,6 +177,7 @@ a:focus {
 }
 
 .content {
+    margin-top: 1.5em;
     padding: 2em 3em 0;
     max-width: 900px;
 }
@@ -151,10 +185,19 @@ a:focus {
 .post {
     padding-bottom: 2em;
 }
+.back{
+    margin-top: -2%;   
+    padding-bottom: 2em; 
+    font-size: 0.8em;
+
+}
 .post-title {
     font-size: 2em;
     color: rgb(142, 142, 214);
     margin-bottom: 0.2em;
+}
+.big {
+    font-size: 2.5em;
 }
 .post-avatar {
     border-radius: 50px;
@@ -162,9 +205,11 @@ a:focus {
     margin-left: 1em;
 }
 .post-description {
-    font-family: 'Droid Serif', Georgia, serif;
     color: #444;
     line-height: 1.8em;
+}
+.post-description,.post-content {
+    font-family: 'Droid Serif', Georgia, serif;
 }
 .post-meta {
     color: #999;
@@ -212,35 +257,23 @@ a:focus {
     }
 
 .footer {
-    text-align: center;
-    padding: 1em 0;
-    color: #999;
+    text-align: right;
+    width: 25%;
+    padding: 0 2em 1em 0;
+    color: #aaa;
+    display: block;
+    position: fixed;
+    bottom: 0;
+}
+.footer section {
     font-size: 70%;
 }
 .footer a {
-    color: #333;
+    color: #ccc;
 }
 .footer .pure-menu a:hover,
 .footer .pure-menu a:focus {
     background: none;
-}
-
-.social-list {
-    margin: 0;
-    margin-top: 10px;
-    padding: 0;
-    list-style: none;
-}
-.social-item {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-}
-
-.social-item a {
-    background: transparent;
-    color: #fff;
-    margin-top: 1em;
 }
 
 .post-share-box {
@@ -293,6 +326,26 @@ a:focus {
 
     #layout {
         padding: 0;
+    }
+
+    .footer {
+        position: relative;
+        bottom: 0;
+        padding: 1em 0;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .post-share-box {
+        width:100%;
+        text-align: center;
+        margin:0.7em;
+        margin-top:-5px;
+        padding:2px;
+    }
+    .share h3 {
+        display: inline;
     }
 }
 
