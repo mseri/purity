@@ -79,11 +79,26 @@
         </section>
         /-->
 
-        <!-- 
+        <!-- GOOGLE+ COMMENTS
         <section class="post-comments">
             <div class="g-comments" data-href="{{@blog.url}}{{url}}" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">Loading Google+ Comments ...</div>
             <script async type="text/javascript" src="//apis.google.com/js/plusone.js?callback=gpcb"></script>
             <noscript>Please enable JavaScript to view the <a href="https://plus.google.com/">comments powered by Google+.</a></noscript>
+        </section>
+        -->
+
+        <!-- FACEBOOK COMMENTS
+        <section class="post-comments">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=###YourAppID###";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+         
+        <div class="fb-comments" data-href="{{@blog.url}}{{url}}" data-width="470"></div>
         </section>
         -->
 
