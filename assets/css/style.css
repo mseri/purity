@@ -112,6 +112,9 @@ a {
     .blog-description {
         color: rgb(142, 142, 214);
     }
+    #blog-logo img {
+        margin-bottom: 1em;
+    }
 
     .nav-item a {
         background: transparent;
@@ -129,6 +132,11 @@ a {
 section.post {
     border-bottom: 1px solid rgba(142, 142, 214, 0.3);
 }
+    
+    .back a {
+        color: #999;
+    }
+
     .content-subhead {
         color: #aaa;
         border-bottom: 1px solid #eee;
