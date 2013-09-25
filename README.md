@@ -5,6 +5,7 @@ Freely inspired by [Pure Blog example layout](http://purecss.io/layouts/)
 
 ## History
 
+- 0.0.2 added a Light theme version (branch light); added Google +, Disqus and Facebook comments (just enable the one you prefer uncommenting it in post.hbs)
 - 0.0.1 first release
 
 ## Copyright & License
