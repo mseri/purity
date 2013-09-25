@@ -397,7 +397,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #efefef;
+    border-top: 1px solid #ccc;
     margin: 3.2em 0;
     padding: 0;
 }
@@ -406,8 +406,8 @@ blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.6em 0 1.6em -2.2em;
-    padding: 0 0 0 1.6em;
-    border-left: #4a4a4a 0.4em solid;
+    padding: 0 2em 0 2em;
+    border-left: #ccc 0.4em solid;
 }
 
 blockquote p {
@@ -435,15 +435,33 @@ code {
     font-family: Menlo, Inconsolata, monospace, sans-serif;
     font-size: 0.85em;
     white-space: pre;
-    border: 1px solid #E3EDF3;
-    background: #F7FAFB;
+    border: 1px solid #999;
+    background: #ccc;
     border-radius: 2px;
+}
+
+pre {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    border: 1px solid #999;
+    width: 100%;
+    padding: 10px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.9em;
+    white-space: pre;
+    overflow: auto;
+    background: #ccc;
+    border-radius: 3px;
 }
 
 pre code {
     font-size: inherit;
     white-space: -moz-pre-wrap;
     white-space: pre-wrap;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 /* ==========================================================================
