@@ -126,34 +126,35 @@ a {
     .social-item a:hover {
         color: rgb(142, 142, 214);
     }
-
-.content-subhead {
-    color: #aaa;
-    border-bottom: 1px solid #eee;
+section.post {
+    border-bottom: 1px solid rgb(142, 142, 214);
 }
-.post-title {
-    color: rgb(142, 142, 214);
-}
-.post-description, .post-content {
-    color: #444;
-}
-    .post-meta {
-        color:#999;
+    .content-subhead {
+        color: #aaa;
+        border-bottom: 1px solid #eee;
     }
-    .post-image-meta {
-        color: #fff;
-        text-shadow: 0 1px 1px #333;
+    .post-title {
+        color: rgb(142, 142, 214);
     }
-.post-comments {
-    border-top: 1px solid rgb(103, 103, 180);
-}
-.post-share-box {
-    border: 1px solid rgb(142, 142, 214);
-}
-
-.page-number {
-    color: #999;
-}
+    .post-description, .post-content {
+        color: #444;
+    }
+        .post-meta {
+            color:#999;
+        }
+        .post-image-meta {
+            color: #fff;
+            text-shadow: 0 1px 1px #333;
+        }
+    .post-comments {
+        /*border-top: 1px solid rgb(103, 103, 180);*/
+    }
+    .post-share-box {
+        border: 1px solid rgb(142, 142, 214);
+    }
+    .page-number {
+        color: #999;
+    }
 
 .footer {
     color: #aaa;
