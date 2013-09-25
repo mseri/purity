@@ -1,6 +1,6 @@
 # pureBuster
 
-A [Pure](http://purecss.io) based theme for [Ghost](http://github.com/tryghost/ghost/).
+A [MathJax](http://www.mathjax.org) ready [Pure](http://purecss.io) based theme for [Ghost](http://github.com/tryghost/ghost/).
 Freely inspired by [Pure Blog example layout](http://purecss.io/layouts/)
 
 ## History
