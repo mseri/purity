@@ -100,34 +100,34 @@ a {
     background: rgb(24, 33, 61);
     color: #fff;
 }
-
+.sidebar a {
+    color: #fff;
+}
+.sidebar a:hover {
+    color: rgb(142, 142, 214);
+}
+    .blog-title a:hover {
+        color: #fff;
+    }
     .blog-description {
         color: rgb(142, 142, 214);
-    }
-    .blog-title a {
-        color: #fff;
     }
 
     .nav-item a {
         background: transparent;
         border: 1px solid rgb(103, 103, 180);
-        color: #fff;
     }
     .nav-item a:hover,
     .nav-item a:focus {
         border: 3px solid rgb(142, 142, 214);
-        color: rgb(142, 142, 214);
     }
 
     .social-item a {
         background: transparent;
-        color: #fff;
     }
-    .social-item a:hover {
-        color: rgb(142, 142, 214);
-    }
+
 section.post {
-    border-bottom: 1px solid rgb(142, 142, 214);
+    border-bottom: 1px solid rgba(142, 142, 214, 0.3);
 }
     .content-subhead {
         color: #aaa;
@@ -144,7 +144,7 @@ section.post {
         }
         .post-image-meta {
             color: #fff;
-            text-shadow: 0 1px 1px #333;
+            text-shadow: 0 1px 1px #ccc;
         }
     .post-comments {
         /*border-top: 1px solid rgb(103, 103, 180);*/
@@ -152,6 +152,9 @@ section.post {
     .post-share-box {
         border: 1px solid rgb(142, 142, 214);
     }
+        .share a:hover {
+            color: rgba(142, 142, 214, 0.7);
+        }
     .page-number {
         color: #999;
     }
@@ -340,24 +343,29 @@ body,
             margin-left: 2px;
             margin-right: 2px;
         }
+        .share a:hover {
+            text-decoration: none;
+        }
 
 
 .pagination {
     margin-bottom: 10px;
+    font-size: 80%;
 }
-
     .page-number {
-        margin-left:5px;
-        margin-right:5px;
         text-align: center;
     }
-
-    .older-posts:before{
+    .older-posts:before {
         content: '• ';
     }
-
+    .older-posts {
+        margin-left:5px;
+    }
     .newer-posts:after {
         content: ' •';
+    }
+    .newer-posts {
+        margin-right: 5px;
     }
 
 .footer {
