@@ -97,20 +97,21 @@ a {
 }
 
 .sidebar {
-    background: rgb(24, 33, 61);
+    border-right: 1px solid rgba(24, 33, 61, 0.8);
+    background: rgb(142, 142, 214);
     color: #fff;
 }
 .sidebar a {
     color: #fff;
 }
 .sidebar a:hover {
-    color: rgb(142, 142, 214);
+    color: rgba(24, 33, 61, 0.8);
 }
     .blog-title a:hover {
         color: #fff;
     }
     .blog-description {
-        color: rgb(142, 142, 214);
+        color: rgba(24, 33, 61, 0.8);
     }
 
     .nav-item a {
@@ -119,7 +120,7 @@ a {
     }
     .nav-item a:hover,
     .nav-item a:focus {
-        border: 3px solid rgb(142, 142, 214);
+        border: 1px solid rgba(24, 33, 61, 0.8);
     }
 
     .social-item a {
@@ -127,7 +128,7 @@ a {
     }
 
 section.post {
-    border-bottom: 1px solid rgba(142, 142, 214, 0.3);
+    border-bottom: 1px solid rgba(142, 142, 214, 0.2);
 }
     .content-subhead {
         color: #aaa;
@@ -153,17 +154,17 @@ section.post {
         border: 1px solid rgb(142, 142, 214);
     }
         .share a:hover {
-            color: rgba(142, 142, 214, 0.7);
+            color: rgba(142, 142, 214, 0.8);
         }
     .page-number {
         color: #999;
     }
 
 .footer {
-    color: #aaa;
+    color: rgba(24, 33, 61, 0.6);
 }
     .footer a {
-        color: #ccc;
+        color: rgba(24, 33, 61, 0.8);
     }
     .footer .pure-menu a:hover,
     .footer .pure-menu a:focus {
@@ -393,6 +394,8 @@ body,
         width: 100%;
         position: relative;
         margin: 0;
+        border-bottom: 1px solid rgba(24, 33, 61, 0.8);
+        border-right: none;
     }
 
     .header {
