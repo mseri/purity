@@ -1,3 +1,7 @@
+/* ==========================================================================
+   0. Includes - Ground zero
+   ========================================================================== */
+
 /* Import purecss-0.3 */
 @import url(pure-min-0.3.css);
 
@@ -13,6 +17,12 @@
     font-style: normal;
 }
 
+
+/* ==========================================================================
+   1. Icons
+   ========================================================================== */
+
+
 /* Apply these base styles to all icons */
 .icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
     font-family: 'icons';
@@ -24,26 +34,6 @@
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     text-decoration: none;
-}
-
-/*
-When setting the primary font stack, apply it to the Pure grid units along with
-the `body`. Pure Grids use specific font stacks to ensure the greatest
-OS/browser compatibility.
-*/
-body,
-.pure-g [class *= "pure-u"],
-.pure-g-r [class *= "pure-u"] {
-    /* Set you're content font stack here: */
-    font-family: 'Open Sans', Helvetica , sans-serif;
-}
-
-h1, h2, h3,
-h4, h5, h6 {
-    text-rendering: optimizeLegibility;
-    line-height: 1;
-    margin-top: 0;
-    font-family: 'Open Sans', sans-serif;
 }
 
 /* Each icon is created by inserting the corret character into the 
@@ -65,22 +55,140 @@ h4, h5, h6 {
     content: "\e004";
 }
 
+/* ==========================================================================
+   2. General setup
+   ========================================================================== */
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
+h1, h2, h3,
+h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin-top: 0;
+}
+
 a {
     text-decoration: none;
-    color: rgb(142, 142, 214);
 }
 a:hover,
 a:focus {
     text-decoration: underline;
 }
 
-/* LAYOUT CSS */
+/* Hides shit */
+.hidden {
+    text-indent: -9999px;
+    visibility: hidden;
+    display: none;
+}
+
+/* ==========================================================================
+   2.1 Colours - All the colors set up is here to provide an easy way 
+                to change the theme colorscheme
+   ========================================================================== */
+
+a {
+    color: rgb(142, 142, 214);
+}
+
+.sidebar {
+    background: rgb(24, 33, 61);
+    color: #fff;
+}
+
+    .blog-description {
+        color: rgb(142, 142, 214);
+    }
+    .blog-title a {
+        color: #fff;
+    }
+
+    .nav-item a {
+        background: transparent;
+        border: 1px solid rgb(103, 103, 180);
+        color: #fff;
+    }
+    .nav-item a:hover,
+    .nav-item a:focus {
+        border: 3px solid rgb(142, 142, 214);
+        color: rgb(142, 142, 214);
+    }
+
+    .social-item a {
+        background: transparent;
+        color: #fff;
+    }
+    .social-item a:hover {
+        color: rgb(142, 142, 214);
+    }
+
+.content-subhead {
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+}
+.post-title {
+    color: rgb(142, 142, 214);
+}
+.post-description, .post-content {
+    color: #444;
+}
+    .post-meta {
+        color:#999;
+    }
+    .post-image-meta {
+        color: #fff;
+        text-shadow: 0 1px 1px #333;
+    }
+.post-comments {
+    border-top: 1px solid rgb(103, 103, 180);
+}
+.post-share-box {
+    border: 1px solid rgb(142, 142, 214);
+}
+
+.page-number {
+    color: #999;
+}
+
+.footer {
+    color: #aaa;
+}
+    .footer a {
+        color: #ccc;
+    }
+    .footer .pure-menu a:hover,
+    .footer .pure-menu a:focus {
+        background: none;
+    }
+    
+/* ==========================================================================
+   2.2 Fonts - All the fonts are configured here
+   ========================================================================== */
+/*
+When setting the primary font stack, apply it to the Pure grid units along with
+the `body`. Pure Grids use specific font stacks to ensure the greatest
+OS/browser compatibility.
+*/
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    /* Set you're content font stack here: */
+    font-family: 'Open Sans', Helvetica , sans-serif;
+}
+
+.post-description,.post-content {
+    font-family: 'Droid Serif', Georgia, serif;
+}
+
+/* ==========================================================================
+   3. Layout CSS
+   ========================================================================== */
+
 #layout {
     padding-left: 25%; /* "left col (nav + list)" width */
     position: relative;
@@ -92,84 +200,67 @@ a:focus {
     bottom: 0;
     width: 25%;
     margin-left: -25%;
-    background: rgb(24, 33, 61);
-    color: #fff;
 }
 
-.header {
-    margin: 1.5em 2em 0;
-    text-align: right;
-}
+    .header {
+        margin: 1.5em 2em 0;
+        text-align: right;
+    }
 
-.blog-title,
-.blog-description {
-    margin: 0;
-}
-.blog-title {
-    text-transform: uppercase;
-}
-.blog-description {
-    font-weight: 300;
-    color: rgb(142, 142, 214);
-}
+        .blog-title,
+        .blog-description {
+            margin: 0;
+        }
+        .blog-title {
+            text-transform: uppercase;
+        }
+        .blog-description {
+            font-weight: 300;
+        }
 
-.blog-title a {
-    color: rgb(255,255,255);
-}
+        .blog-title a:hover {
+            text-decoration: none;
+        }
 
-.blog-title a:hover {
-    text-decoration: none;
-}
+        .nav-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+            .nav-item {
+                display: inline-block;
+                *display: inline;
+                zoom: 1;
+            }
+            .nav-item a {
+                margin-top: 1em;
+            }
+            .nav-item a:hover,
+            .nav-item a:focus {
+                text-decoration: none;
+            }
 
-.nav-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.nav-item {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-}
-.nav-item a {
-    background: transparent;
-    border: 1px solid rgb(103, 103, 180);
-    color: #fff;
-    margin-top: 1em;
-}
-.nav-item a:hover,
-.nav-item a:focus {
-    border: 3px solid rgb(142, 142, 214);
-    color: rgb(142, 142, 214);
-    text-decoration: none;
-}
+        .social-list {
+            margin: 0;
+            margin-top: 1.5em;
+            padding: 0;
+            list-style: none;
+        }
+            .social-item {
+                display: inline-block;
+                *display: inline;
+                zoom: 1;
+            }
 
-.social-list {
-    margin: 0;
-    margin-top: 1.5em;
-    padding: 0;
-    list-style: none;
-}
-.social-item {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-}
-
-.social-item a {
-    background: transparent;
-    color: #fff;
-    margin-top: 1em;
-}
-.social-item a:hover {
-    text-decoration: none;
-    color: rgb(142, 142, 214);
-}
+            .social-item a {
+                margin-top: 1em;
+            }
+            .social-item a:hover {
+                text-decoration: none;
+            }
 
 .content-subhead {
     text-transform: uppercase;
-    color: #aaa;
-    border-bottom: 1px solid #eee;
     padding: 0.4em 0;
     font-size: 80%;
     font-weight: 500;
@@ -185,70 +276,76 @@ a:focus {
 .post {
     padding-bottom: 2em;
 }
-.back{
-    margin-top: -2%;   
-    padding-bottom: 2em; 
-    font-size: 0.8em;
+    .back{
+        margin-top: -2%;   
+        padding-bottom: 2em; 
+        font-size: 0.8em;
 
-}
-.post-title {
-    font-size: 2em;
-    color: rgb(142, 142, 214);
-    margin-bottom: 0.2em;
-}
-.big {
-    font-size: 2.5em;
-}
-.post-avatar {
-    border-radius: 50px;
-    float: right;
-    margin-left: 1em;
-}
-.post-description {
-    color: #444;
-    line-height: 1.8em;
-}
-.post-description,.post-content {
-    font-family: 'Droid Serif', Georgia, serif;
-}
-.post-meta {
-    color: #999;
-    font-size: 90%;
-    margin: 0;
-}
+    }
+    .post-title {
+        font-size: 2em;
+        margin-bottom: 0.2em;
+    }
+    .big {
+        font-size: 2.5em;
+    }
+    .post-avatar {
+        border-radius: 50px;
+        float: right;
+        margin-left: 1em;
+    }
+    .post-description {
+        line-height: 1.8em;
+    }
+    .post-meta {
+        font-size: 90%;
+        margin: 0;
+    }
+    .post-images {
+        margin: 1em 0;
+    }
+    .post-image-meta {
+        margin-top: -3.5em;
+        margin-left: 1em;
+    }
 
-.post-tagline {
-    /*margin: 0 0.1em;
-    padding: 0.3em 0.5em;*/
-    /*border: 1px solid rgb(142, 142, 214);
-    font-size: 80%;*/
-    /*-webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;*/
-}
+    .post-comments {
+        margin-top: 2em;
+        padding-top: 1.2em;
+    }
 
-.post-images {
-    margin: 1em 0;
-}
-.post-image-meta {
-    margin-top: -3.5em;
-    margin-left: 1em;
-    color: #fff;
-    text-shadow: 0 1px 1px #333;
-}
+    .post-share-box {
+        display: block;
+        float: right;
+        text-align: center;
+        margin: 0;
+        margin-left: 1em;
+        margin-right: 0.5em;
+        margin-bottom: 1em;
+        padding: 1em;
+        padding-top:0.5em;
+    }
+        .share h3 {
+            margin: 0;
+            margin-bottom: 0.5em;
+            font-size: 80%;
+        }
 
-.post-comments {
-    margin-top: 2em;
-    padding-top: 1.2em;
-    border-top: 1px solid rgb(103, 103, 180);
-}
+        .share {
+            font-size: 120%;
+        }
+
+        .share a {
+            margin-left: 2px;
+            margin-right: 2px;
+        }
+
 
 .pagination {
     margin-bottom: 10px;
 }
 
     .page-number {
-        color: #999;
         margin-left:5px;
         margin-right:5px;
         text-align: center;
@@ -266,57 +363,23 @@ a:focus {
     text-align: right;
     width: 25%;
     padding: 0 2em 1em 0;
-    color: #aaa;
     display: block;
     position: fixed;
     bottom: 0;
 }
-.footer section {
-    font-size: 70%;
-}
-.footer a {
-    color: #ccc;
-}
-.footer .pure-menu a:hover,
-.footer .pure-menu a:focus {
-    background: none;
-}
+    .footer section {
+        font-size: 70%;
+    }
 
-.post-share-box {
-    display: block;
-    float: right;
-    text-align: center;
-    margin: 0;
-    margin-left: 1em;
-    margin-right: 0.5em;
-    margin-bottom: 1em;
-    padding: 1em;
-    padding-top:0.5em;
-    border: 1px solid rgb(142, 142, 214);
-}
-.share h3 {
-    margin: 0;
-    margin-bottom: 0.5em;
-    font-size: 80%;
-}
-
-.share {
-    font-size: 120%;
-}
-
-.share a {
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
-/* Hides shit */
-.hidden {
-    text-indent: -9999px;
-    visibility: hidden;
-    display: none;
-}
+/* ==========================================================================
+   4. Tablets
+   ========================================================================== */
 
 @media (max-width: 970px) {
+    #layout {
+        padding: 0;
+    }
+
     .sidebar {
         width: 100%;
         position: relative;
@@ -328,10 +391,6 @@ a:focus {
         top: auto;
         margin: 3em auto;
         position: static;
-    }
-
-    #layout {
-        padding: 0;
     }
 
     .footer {
@@ -350,10 +409,14 @@ a:focus {
         margin-top:-5px;
         padding:2px;
     }
-    .share h3 {
-        display: inline;
-    }
+        .share h3 {
+            display: inline;
+        }
 }
+
+/* ==========================================================================
+   5. Phones
+   ========================================================================== */
 
 @media (max-width: 480px) {
     .content {
