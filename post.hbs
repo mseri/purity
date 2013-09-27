@@ -4,7 +4,7 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 {{! Everything inside the #post tags pulls data from the post }}
 
-<main class="content" role="main">
+<main class="content" role="main" id="top-post">
         <div class="back">
             <a href="{{@blog.url}}">&larr;  back to the home page</a>
         </div>
@@ -24,7 +24,7 @@
 
         {{#post}}
 
-        <header class="post-header" id="top-post">
+        <header class="post-header">
             {{! img class="post-avatar" alt="Tilo Mitra's avatar" src="/img/common/tilo-avatar.png" height="48" width="48"}}
             <h2 class="post-title big">{{title}}</h2>
             <p class="post-meta">Written{{#if author}} by {{author.name}}{{/if}} the <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> - <span class="post-tagline">{{#if tags}} Tagged: {{tags separator=" | "}}{{/if}}</span></p>
@@ -110,10 +110,5 @@
     <script type="text/javascript">
         document.getElementById( 'top-post' ).scrollIntoView();
     </script>
-
-    <script type="text/javascript">
-        document.getElementById( 'top-post' ).scrollIntoView();
-    </script>
-
 
 </main>
