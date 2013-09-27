@@ -12,6 +12,7 @@ A running version of the dark theme is on my blog [Tales of a Fractal Spectrum](
 
 ## History
 
+- 0.0.4 minor fixing and a whole new font of icons
 - 0.0.3 dark and light theme merged. 
 - 0.0.2 added a Light theme version (branch light); added Google +, Disqus and Facebook comments (just enable the one you prefer uncommenting it in post.hbs)
 - 0.0.1 first release
