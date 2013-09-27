@@ -340,14 +340,8 @@ body,
     .page-number {
         text-align: center;
     }
-    .older-posts:before {
-        content: '• ';
-    }
     .older-posts {
         margin-left:5px;
-    }
-    .newer-posts:after {
-        content: ' •';
     }
     .newer-posts {
         margin-right: 5px;

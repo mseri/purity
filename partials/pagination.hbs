@@ -1,5 +1,6 @@
 <nav class="pagination pure-grid" role="pagination">
-    <div class="pure-u-1-3 newer-posts">
+    <div class="pure-u-1-5">
+    <div class="pure-u-1-5 newer-posts">
     {{#if prev}}
         <a class="newer-posts" href="{{pageUrl prev}}">&larr; Newer Posts</a>
     {{/if}}
@@ -7,9 +8,10 @@
     <div class="pure-u-1-3 page-number">
     	<span>Page {{page}} of {{pages}}</span>
     </div>
-    <div class="pure-u-1-3 older-posts">
+    <div class="pure-u-1-5 older-posts">
     {{#if next}}
         <a class="older-posts" href="{{pageUrl next}}">Older Posts &rarr;</a>
     {{/if}}
     </div>
+    <div class="pure-u-1-5">
 </nav>
