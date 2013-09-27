@@ -338,12 +338,18 @@ body,
     font-size: 80%;
 }
     .page-number {
+        width:40%;
+        display: inline-block;
         text-align: center;
     }
     .older-posts {
+        display: inline-block;
+        width:30%;
         margin-left:5px;
     }
     .newer-posts {
+        display: inline-block;
+        width: 30%;
         margin-right: 5px;
     }
 

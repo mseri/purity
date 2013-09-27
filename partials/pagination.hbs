@@ -1,17 +1,17 @@
-<nav class="pagination pure-grid" role="pagination">
-    <div class="pure-u-1-5"></div>
-    <div class="pure-u-1-5 newer-posts">
+<nav class="pagination" role="pagination">
+    <div class="newer-posts">
     {{#if prev}}
-        <a class="newer-posts" href="{{pageUrl prev}}">&larr; Newer Posts</a>
+        <a href="{{pageUrl prev}}">&larr; Newer Posts</a>
     {{/if}}
+    &nbsp;
     </div>
-    <div class="pure-u-1-3 page-number">
+    <div class="page-number">
     	<span>Page {{page}} of {{pages}}</span>
     </div>
-    <div class="pure-u-1-5 older-posts">
+    <div class="older-posts">
+    &nbsp;
     {{#if next}}
-        <a class="older-posts" href="{{pageUrl next}}">Older Posts &rarr;</a>
+        <a href="{{pageUrl next}}">Older Posts &rarr;</a>
     {{/if}}
     </div>
-    <div class="pure-u-1-5"></div>
 </nav>
