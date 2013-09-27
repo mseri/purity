@@ -2,8 +2,12 @@
 
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
+{{! Everything inside the #post tags pulls data from the post }}
 
 <main class="content" role="main">
+        <div class="back">
+            <a href="{{@blog.url}}">&larr;  back to the home page</a>
+        </div>
 
     <article class="{{post_class}}">
 
@@ -17,11 +21,6 @@
                 {{/if}}
             </a>
         </header> /-->
-
-        {{! Everything inside the #post tags pulls data from the post }}
-        <div class="back">
-            <a href="javascript:history.go(-1);">&larr;  back to the previous page</a>
-        </div>
 
         {{#post}}
 
@@ -39,7 +38,7 @@
 
             <section class="share">
                 
-                <h3>Share me on:</h3>
+                <h3>Share this post</h3>
                 <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <span class="hidden">Facebook</span>
