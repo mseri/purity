@@ -1,5 +1,0 @@
-					<li class="social-item"><a class="subscribe icon-twitter" href="http://www.twitter.com/marcelloseri" target="_blank"></a></li>&nbsp;
-                    <li class="social-item"><a class="subscribe icon-facebook" href="http://www.facebook.com/marcelloseri" target="_blank"></a></li>&nbsp; 
-                    <li class="social-item"><a class="subscribe icon-github" href="http://www.github.com/mseri" target="_blank"></a></li>&nbsp;
-                    <li class="social-item">&nbsp;</li>
-                    <li class="social-item"><a class="subscribe icon-feed" href="{{@blog.url}}/rss/" target="_blank"></a></li>
