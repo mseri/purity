@@ -1,12 +1,24 @@
 # pureBuster
 
 A [MathJax](http://www.mathjax.org) ready [Pure](http://purecss.io) based theme for [Ghost](http://github.com/tryghost/ghost/).
-Freely inspired by [Pure Blog example layout](http://purecss.io/layouts/)
+Freely inspired by [Pure Blog example layout](http://purecss.io/layouts/).
+
+There are two main themes: dark and light. They can be switched changing the @import rule at the beginning of `assets/css/style.css`.
+To change the colorsets and keep the theme structure is enough to copy either dark.css or light.css (they contains only colours information), modify it and redefine the import line with the appropriate name.
+
+To set up google+, disqus or facebook comments is enough to open posts.hbs, uncomment the appropriate section at the end of the file and add the appropriate variables.
+
+A running version of the dark theme is on my blog [Tales of a Fractal Spectrum](http://ghost.mseri.me).
 
 ## History
 
+- 0.0.3 dark and light theme merged. 
 - 0.0.2 added a Light theme version (branch light); added Google +, Disqus and Facebook comments (just enable the one you prefer uncommenting it in post.hbs)
 - 0.0.1 first release
+
+## Known problems
+
+The social icons do not appear in google chrome. I am still working on a fix.
 
 ## Copyright & License
 
