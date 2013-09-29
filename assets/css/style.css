@@ -257,7 +257,7 @@ body,
 .content {
     margin-top: 1.5em;
     padding: 2em 3em 0;
-    max-width: 900px;
+    max-width: 820px;
 }
 
 .post {
@@ -283,6 +283,13 @@ body,
     }
     .post-description {
         line-height: 1.8em;
+    }
+    .post-content {
+        font-size: 1.1em;
+        line-height: 1.3em;
+    }
+    .post-content p {
+        margin: 1.2em 0;
     }
     .post-meta {
         font-size: 90%;
@@ -316,12 +323,12 @@ body,
     }
         .share h3 {
             margin: 0;
-            margin-bottom: 0.5em;
+            margin-bottom: 0.8em;
             font-size: 80%;
         }
 
         .share {
-            font-size: 120%;
+            /*font-size: 120%;*/
         }
 
         .share a {
@@ -548,10 +555,12 @@ pre code {
         text-align: center;
         margin:0.7em;
         margin-top:-5px;
-        padding:2px;
+        padding: 6px 2px 2px;
     }
         .share h3 {
             display: inline;
+            vertical-align: top;
+            font-size: 90%;
         }
 }
 
