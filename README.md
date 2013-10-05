@@ -18,10 +18,6 @@ A running version of the dark theme is on my blog [Tales of a Fractal Spectrum](
 - 0.0.2 added a Light theme version (branch light); added Google +, Disqus and Facebook comments (just enable the one you prefer uncommenting it in post.hbs)
 - 0.0.1 first release
 
-## Known problems
-
-The social icons do not appear in google chrome. I am still working on a fix.
-
 ## Copyright & License
 
 Copyright (C) 2013 Marcello Seri - Released under the MIT Lincense.
