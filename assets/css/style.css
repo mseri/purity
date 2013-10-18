@@ -343,6 +343,7 @@ body,
 .pagination {
     margin-bottom: 10px;
     font-size: 80%;
+    white-space:nowrap;
 }
     .page-number {
         width:40%;
@@ -352,12 +353,15 @@ body,
     .older-posts {
         display: inline-block;
         width:30%;
-        margin-left:5px;
+        padding-left:5px;
+        text-align: right;
+        padding-right: 5px;
     }
     .newer-posts {
         display: inline-block;
         width: 30%;
-        margin-right: 5px;
+        padding-right: 5px;
+        text-align: left;
     }
 
 .footer {
