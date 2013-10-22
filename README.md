@@ -12,6 +12,7 @@ A running version of the dark theme is on my blog [Tales of a Fractal Spectrum](
 
 ## History
 
+- 0.0.6 fixed pagination and renamed theme to Purity
 - 0.0.5 added minified styles (with [csso](http://css.github.io/csso/)) 
 - 0.0.4 minor fixing and a whole new font of icons
 - 0.0.3 dark and light theme merged. 
