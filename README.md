@@ -1,6 +1,6 @@
-# pureBuster
+# purity
 
-A [MathJax](http://www.mathjax.org) ready [Pure](http://purecss.io) based theme for [Ghost](http://github.com/tryghost/ghost/).
+`purity` is a  [MathJax](http://www.mathjax.org) ready [Pure](http://purecss.io) based theme for [Ghost](http://github.com/tryghost/ghost/).
 Freely inspired by [Pure Blog example layout](http://purecss.io/layouts/).
 
 There are two main themes: dark and light. They can be switched changing the @import rule at the beginning of `assets/css/style.css`.
