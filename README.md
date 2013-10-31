@@ -8,7 +8,7 @@ To change the colorsets and keep the theme structure is enough to copy either da
 
 To set up google+, disqus or facebook comments is enough to open posts.hbs, uncomment the appropriate section at the end of the file and add the appropriate variables. You can add the Comments counter on the index page modifying the code according to [Another way of enabling disqus on Ghost](http://blog.reggiesuplido.com/another-way-of-enabling-disqus-on-ghost/).
 
-A running version of the dark theme is on my blog [Tales of a Fractal Spectrum](http://ghost.mseri.me). The light version is [available here](http://amazon.mseri.me).
+A running version of the dark theme is on my blog [Tales of a Fractal Spectrum](http://ghost.mseri.me).
 
 ## History
 
