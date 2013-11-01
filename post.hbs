@@ -9,25 +9,14 @@
             <a href="{{@blog.url}}">&larr;  back to the home page</a>
         </div>
 
-    <article class="{{post_class}}">
-
-        {{! Each post has the blog logo at the top, with a link back to the home page }}
-        <!--<header class="post-header">
-            <a id="blog-logo" href="{{@blog.url}}">
-                {{#if @blog.logo}}
-                    <img src="{{@blog.logo}}" alt="Blog Logo" />
-                {{else}}
-                    {{@blog.title}}
-                {{/if}}
-            </a>
-        </header> /-->
+    <article itemscope itemtype="http://schema.org/Article" class="{{post_class}}">
 
         {{#post}}
 
         <header class="post-header">
             {{! img class="post-avatar" alt="...'s avatar" src="..." height="48" width="48"}}
-            <h2 class="post-title big">{{title}}</h2>
-            <p class="post-meta">Written{{#if author}} by {{author.name}}{{/if}} the <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> - <span class="post-tagline">{{#if tags}} Tagged: {{tags separator=" | "}}{{/if}}</span></p>
+            <h2 itemprop="name" class="post-title big">{{title}}</h2>
+            <p class="post-meta">Written{{#if author}} by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{author.name}}</span></span>{{/if}} the <time itemprop="datePublished" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time> - <span class="post-tagline">{{#if tags}} Tagged: {{tags separator=" | "}}{{/if}}</span></p>
         </header>
 
         {{! Everything below outputs content of the the post which has been published }}
@@ -56,10 +45,13 @@
 
         </div>
 
+        <div itemprop="articleBody">
             {{content}}
+        </div>
+        
         </section>
 
-        <!-- DISQUS COMMENTS
+        <!-- REMOVE THIS LINE TO ENABLE DISQUS COMMENTS
         <section class="post-comments">
             <div id="disqus_thread"></div>
             <script type="text/javascript">
@@ -79,17 +71,17 @@
             <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
         </section>
-        /-->
+        REMOVE THIS LINE TO ENABLE DISQUS COMMENTS -->
 
-        <!-- GOOGLE+ COMMENTS
+        <!-- REMOVE THIS LINE TO ENABLE GOOGLE+ COMMENTS
         <section class="post-comments">
             <div class="g-comments" data-href="{{@blog.url}}{{url}}" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD">Loading Google+ Comments ...</div>
             <script async type="text/javascript" src="//apis.google.com/js/plusone.js?callback=gpcb"></script>
             <noscript>Please enable JavaScript to view the <a href="https://plus.google.com/">comments powered by Google+.</a></noscript>
         </section>
-        -->
+        REMOVE THIS LINE TO ENABLE GOOGLE + COMMENTS -->
 
-        <!-- FACEBOOK COMMENTS
+        <!-- REMOVE THIS LINE TO ENABLE FACEBOOK COMMENTS
         <section class="post-comments">
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
@@ -102,7 +94,7 @@
          
         <div class="fb-comments" data-href="{{@blog.url}}{{url}}" data-width="470"></div>
         </section>
-        -->
+        REMOVE THIS LINE TO ENABLE FACEBOOK COMMENTS -->
 
         {{/post}}
 

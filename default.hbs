@@ -22,34 +22,36 @@
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}}">
+<body itemscope itemtype="http://schema.org/WebPage" class="{{body_class}}">
     <div class="pure-g-r" id="layout">
         {{! The big featured header on the homepage, with the site logo and description }}
         <div class="sidebar pure-u">
             <header class="header">
                 <hgroup>
                     {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-                    <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
-                    <h2 class="blog-description">{{@blog.description}}</h2>
+                    <h1 itemprop="name" class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+                    <h2 itemprop="description" class="blog-description">{{@blog.description}}</h2>
                 </hgroup>
 
                 <nav class="nav">
                 <ul class="social-list">
+                    {{! In the following six lines edit the links between the quotations marks close to href= with the appropriate content }}
                     <li class="social-item"><a class="subscribe icon-twitter" href="http://www.twitter.com/..." target="_blank"></a></li>&nbsp;
                     <li class="social-item"><a class="subscribe icon-facebook" href="http://www.facebook.com/..." target="_blank"></a></li>&nbsp; 
+                    <li class="social-item"><a class="subscribe icon-google-plus" href="http://plus.google.com/..." target="_blank" rel="publisher"></a></li>&nbsp;
                     <li class="social-item"><a class="subscribe icon-github" href="http://www.github.com/..." target="_blank"></a></li>&nbsp;
                     <li class="social-item">&nbsp;</li>
                     <li class="social-item"><a class="subscribe icon-feed" href="{{@blog.url}}/rss/" target="_blank"></a></li>
                 </ul>
                 </nav>
-                {{! Here one could add a nav.nav containing ul.nav-list and li.nav-item }}
+
             </header>
             <footer class="footer">
             <div class="twitter-widget" style="margin-left:10%;">
              <a class="twitter-timeline" href="https://twitter.com/marcelloseri" data-widget-id="395942163772473344">Tweets by @marcelloseri</a>
              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
-             <section class="copyright">&copy; 2013 <a href="{{@blog.url}}">{{@blog.title}}</a></section>
+             <section class="copyright">&copy; 2013 <a itemscope="copyrightHolder" href="{{@blog.url}}">{{@blog.title}}</a></section>
              <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://tryghost.org" target="_blank">Ghost</a></section> 
              <section class="theme"><a href="https://github.com/mseri/purity" target="_blank">Purity</a> is built with <a href="http://purecss.io" target="_blank">PureCSS</a></section>
             </footer>
@@ -66,12 +68,26 @@
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    {{! The main JavaScript file for Casper }}
+    <!-- REMOVE THIS LINE TO ENABLE MATHJAX
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
     });
     </script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    REMOVE THIS LINE TO ENABLE MATHJAX -->
+    
+    <!-- REMOVE THIS LINE TO ENABLE GOOGLE ANALYTICS
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'REPLACE_THIS_TEXT_WITH_THE_ACCOUNT_NUMBER_GIVEN_BY_GOOGLE']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    REMOVE THIS LINE TO ENABLE GOOGLE ANALYTICS -->
 </body>
 </html>
