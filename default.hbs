@@ -10,13 +10,15 @@
     <meta name="description" content="{{meta_description}}" />
     {{! OpenGraph Informations}}
     {{#if post}}
+    {{#post}}
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="{{post.title}}" />
-    <meta property="og:description" content="{{post.excerpt}}" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{excerpt}}" />
+    {{/post}}
     {{else}}
     <meta property="og:description" content="{{meta_description}}" />
     <meta property="og:title" content="{{meta_title}}">
-    {{/if}
+    {{/if}}
 
     <link rel="shortcut icon" href="{{@blog.logo}}" />
 
