@@ -3,7 +3,7 @@
 `purity` is a  [MathJax](http://www.mathjax.org) ready [Pure](http://purecss.io) based theme for [Ghost](http://github.com/tryghost/ghost/).
 Freely inspired by [Pure Blog example layout](http://purecss.io/layouts/).
 
-To support the continuous development of this theme and give me the chance to keep it open and updated with the features of all the upcoming Ghost releases **please consider buying it from [Purity (on Gumroad), it is available as a _pay what you want_](https://gum.co/purity)** as insipired by [BiosElemental](http://bioselemental.com/ghost-community-plans/).
+_To support the continuous development of this theme and give me the chance to keep it open and updated with the features of all the upcoming Ghost releases **please consider buying it from [Purity (on Gumroad), it is available as a _pay what you want_](https://gum.co/purity)** as insipired by [BiosElemental](http://bioselemental.com/ghost-community-plans/)._
 
 There are two main themes: dark and light. They can be switched changing the @import rule at the beginning of `assets/css/style.css`.
 To change the colorsets and keep the theme structure is enough to copy either dark.css or light.css (they contains only colours information), modify it and redefine the import line with the appropriate name.
@@ -13,6 +13,8 @@ To set up google+, disqus or facebook comments is enough to open `posts.hbs`, an
 To enable MathJax or Google Analytics is enough to open `default.hbs`, and remove the marked lines at the end of the file.
 
 A running version of the dark theme is on my blog [Tales of a Fractal Spectrum](http://ghost.mseri.me).
+
+<a href="https://gum.co/purity">Please consider to support Purity - a light responsive Ghost theme</a> <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 
 ## History
 
