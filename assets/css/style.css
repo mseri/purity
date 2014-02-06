@@ -271,6 +271,9 @@ body,
         margin-right: 0.7em;
         padding-right: 0.7em;
     }
+    .purity_post {
+        background: fff !important;
+    }
     .back {
         margin-top: -2%;   
         padding-bottom: 2em; 
