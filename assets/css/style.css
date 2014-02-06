@@ -263,11 +263,13 @@ body,
 .post {
     padding-bottom: 2em;
 }
-    .back{
+    .featured {
+        border: 1px;
+    }
+    .back {
         margin-top: -2%;   
         padding-bottom: 2em; 
         font-size: 0.8em;
-
     }
     .post-title {
         font-size: 2em;
