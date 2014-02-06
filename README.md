@@ -17,7 +17,8 @@ A running version of the dark theme is on my blog [Tales of a Fractal Spectrum](
 <a href="https://gum.co/purity">Please consider to support Purity - a light responsive Ghost theme</a> <script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 
 ## History
-
+- 0.0.9 bugfixes, style for featured posts (Ghost 0.4.1) and support to Ghost
+  0.4.1
 - 0.0.8 added integration with [facebook
   opengraph](https://developers.facebook.com/docs/opengraph/)
 - 0.0.7 added integration with [microdata](https://support.google.com/webmasters/answer/176035?hl=en), simplfied feature integration, created landing page on gumroad
