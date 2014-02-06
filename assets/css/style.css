@@ -264,7 +264,12 @@ body,
     padding-bottom: 2em;
 }
     .featured {
-        border: 1px;
+        margin-bottom: 0.7em;
+        padding-top: 0.7em;
+        margin-left: -0.7em;
+        padding-left: 0.7em;
+        margin-right: 0.7em;
+        padding-right: 0.7em;
     }
     .back {
         margin-top: -2%;   
