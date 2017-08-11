@@ -1,0 +1,27 @@
+{
+    "name": "purity",
+    "description": "purity is a MathJax ready Pure based theme for Ghost. Freely inspired by Pure Blog example layout.",
+    "demo": "http://ghost.mseri.me/",
+    "version": "0.0.9",
+    "engines": {
+        "ghost": ">=0.4.1"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Marcello Seri",
+        "email": "nobody@nowhere.com",
+        "url": "http://mseri.me/"
+    },
+    "keywords": [
+        "ghost",
+        "theme"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mseri/purity.git"
+    },
+    "bugs": "https://github.com/mseri/purity/issues",
+    "config": {
+        "posts_per_page": 25
+    }
+}
